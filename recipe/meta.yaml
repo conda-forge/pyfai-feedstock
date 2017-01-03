@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "0.12.0" %}
-{% set sha256 = "430c21e1853f60bd38dac584f8dd523533bacf4ddd17cb2f7ba590cc66bd96ff" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "b5137238c75cc7aa3bd7d9d7ebcdd2200ae8a74cad89ca903bf7f449bd0c2d3c" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: master.tar.gz
-  url: https://github.com/silx-kit/pyFAI/archive/master.tar.gz
+  url: https://github.com/silx-kit/pyFAI/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
