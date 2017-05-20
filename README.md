@@ -19,6 +19,18 @@ tools to calibrate the experimental setup using Debye-Scherrer rings of a
 reference compound.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyfai-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyfai-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyfai-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyfai-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/version.svg)](https://anaconda.org/conda-forge/pyfai)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/downloads.svg)](https://anaconda.org/conda-forge/pyfai)
+
 Installing pyfai
 ================
 
@@ -39,7 +51,6 @@ It is possible to list all of the versions of `pyfai` available on your platform
 ```
 conda search pyfai --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -75,18 +86,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyfai-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyfai-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/version.svg)](https://anaconda.org/conda-forge/pyfai)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/downloads.svg)](https://anaconda.org/conda-forge/pyfai)
 
 
 Updating pyfai-feedstock
