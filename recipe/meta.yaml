@@ -15,6 +15,7 @@ build:
   number: 0
   script: python setup.py install --record record.txt  # [linux]
   script: rm pyFAI/ext/histogram.c & python setup.py install --no-openmp  # [osx]
+  script: python setup.py bdist_wheel &  pip install --pre --no-index --find-links dist/ pyFAI
 
 requirements:
   build:
