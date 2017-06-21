@@ -60,7 +60,7 @@ about:
     tools to calibrate the experimental setup using Debye-Scherrer rings of a
     reference compound.
   doc_url: http://pythonhosted.org/pyFAI/
-  dev_url: https://github.com/kif/pyFAI
+  dev_url: https://github.com/silx-kit/pyFAI/
 
 extra:
   recipe-maintainers:
