@@ -45,7 +45,7 @@ test:
     - pyFAI.third_party
 
 about:
-  home: https://github.com/kif/pyFAI
+  home: https://github.com/silx-kit/pyFAI/
   license: GPL-3
   license_file: LICENSES.txt
   summary: 'Python implementation of fast azimuthal integration'
