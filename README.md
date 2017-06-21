@@ -1,7 +1,7 @@
 About pyfai
 ===========
 
-Home: https://github.com/kif/pyFAI
+Home: https://github.com/silx-kit/pyFAI/
 
 Package license: GPL-3
 
