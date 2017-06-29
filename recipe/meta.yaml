@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --record record.txt  # [linux]
   script: rm pyFAI/ext/histogram.c & python setup.py install --no-openmp  # [osx]
   skip: True  # [win]
@@ -45,7 +45,7 @@ test:
     - pyFAI.third_party
 
 about:
-  home: https://github.com/kif/pyFAI
+  home: https://github.com/silx-kit/pyFAI/
   license: GPL-3
   license_file: LICENSES.txt
   summary: 'Python implementation of fast azimuthal integration'
@@ -60,7 +60,7 @@ about:
     tools to calibrate the experimental setup using Debye-Scherrer rings of a
     reference compound.
   doc_url: http://pythonhosted.org/pyFAI/
-  dev_url: https://github.com/kif/pyFAI
+  dev_url: https://github.com/silx-kit/pyFAI/
 
 extra:
   recipe-maintainers:
