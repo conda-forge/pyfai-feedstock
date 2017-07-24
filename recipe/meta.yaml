@@ -37,6 +37,7 @@ requirements:
     - pillow
     - lxml
     - matplotlib
+    - silx
 
 test:
   imports:
