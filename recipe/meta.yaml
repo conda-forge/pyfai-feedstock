@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: "python setup.py build"  # [linux]
+  script: python setup.py build install  # [linux]
   script: rm pyFAI/ext/histogram.c & python setup.py build --no-openmp  # [osx]
   skip: True  # [win]
 
