@@ -1,20 +1,20 @@
 {% set name = "pyfai" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "ef3b846956f36c1c4eb765c023ec32fe08f395ff5d49d9feceb414c9d3c55eb9" %}
+{% set version = "0.14.1" %}
+{% set sha256 = "089dc3301e44bb954cf11fa5b044d2d9fe8905011e90123feec8b088a2152f3f" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: master.tar.gz
+  fn: v{{ version }}.tar.gz
   url: https://github.com/silx-kit/pyFAI/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  script: python setup.py install --record record.txt  # [linux]
-#  script: rm pyFAI/ext/histogram.c & python setup.py build --no-openmp  # [osx]
+  script: "python setup.py build"  # [linux]
+  script: rm pyFAI/ext/histogram.c & python setup.py build --no-openmp  # [osx]
   skip: True  # [win]
 
 requirements:
@@ -44,6 +44,9 @@ test:
     - pyFAI
     - pyFAI.test
     - pyFAI.third_party
+    - pyFAI.gui
+  commands:
+    - pyFAI-calib -h
 
 about:
   home: https://github.com/silx-kit/pyFAI/
