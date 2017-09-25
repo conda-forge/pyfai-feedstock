@@ -46,7 +46,7 @@ requirements:
 
   run:
     - python
-    - numpy >=1.10.*
+    - numpy >=1.10
     - fabio
     - scipy
     - h5py
