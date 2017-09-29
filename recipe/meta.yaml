@@ -37,7 +37,7 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy 1.10.*
+    - numpy 1.11.*
     - cython
     - scipy
     - matplotlib
@@ -46,7 +46,7 @@ requirements:
 
   run:
     - python
-    - numpy >=1.10
+    - numpy >=1.11
     - fabio
     - scipy
     - h5py
