@@ -1,27 +1,43 @@
 {% set name = "pyfai" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "ef3b846956f36c1c4eb765c023ec32fe08f395ff5d49d9feceb414c9d3c55eb9" %}
+{% set version = "0.14.1" %}
+{% set sha256 = "089dc3301e44bb954cf11fa5b044d2d9fe8905011e90123feec8b088a2152f3f" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: master.tar.gz
+  fn: v{{ version }}.tar.gz
   url: https://github.com/silx-kit/pyFAI/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  script: python setup.py install --record record.txt  # [linux]
-#  script: rm pyFAI/ext/histogram.c & python setup.py build --no-openmp  # [osx]
+  script: python setup.py build install  # [linux]
+  script: rm pyFAI/ext/histogram.c & python setup.py build --no-openmp  # [osx]
   skip: True  # [win]
+  entry_points:
+    - check_calib = pyFAI.app.check_calib:main
+    - detector2nexus = pyFAI.app.detector2nexus:main
+    - diff_map = pyFAI.app.diff_map:main
+    - diff_tomo = pyFAI.app.diff_tomo:main
+    - eiger-mask = pyFAI.app.eiger_mask:main
+    - MX-calibrate = pyFAI.app.mx_calibrate:main
+    - pyFAI-average = pyFAI.app.average:main
+    - pyFAI-benchmark = pyFAI.app.benchmark:main
+    - pyFAI-calib = pyFAI.app.calib:main
+    - pyFAI-calib2 = pyFAI.app.calib2:main [calib2]
+    - pyFAI-drawmask = pyFAI.app.drawmask:main
+    - pyFAI-integrate = pyFAI.app.integrate:main
+    - pyFAI-recalib = pyFAI.app.recalib:main
+    - pyFAI-saxs = pyFAI.app.saxs:main
+    - pyFAI-waxs = pyFAI.app.waxs:main
 
 requirements:
   build:
     - python
     - setuptools
-    - numpy x.x
+    - numpy 1.11.*
     - cython
     - scipy
     - matplotlib
@@ -30,7 +46,7 @@ requirements:
 
   run:
     - python
-    - numpy x.x
+    - numpy >=1.11
     - fabio
     - scipy
     - h5py
@@ -44,6 +60,9 @@ test:
     - pyFAI
     - pyFAI.test
     - pyFAI.third_party
+    - pyFAI.gui
+  commands:
+    - pyFAI-calib -h
 
 about:
   home: https://github.com/silx-kit/pyFAI/
