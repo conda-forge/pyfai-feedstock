@@ -26,7 +26,7 @@ build:
     - pyFAI-average = pyFAI.app.average:main
     - pyFAI-benchmark = pyFAI.app.benchmark:main
     - pyFAI-calib = pyFAI.app.calib:main
-    - pyFAI-calib2 = pyFAI.app.calib2:main [calib2]
+    - pyFAI-calib2 = pyFAI.app.calib2:main
     - pyFAI-drawmask = pyFAI.app.drawmask:main
     - pyFAI-integrate = pyFAI.app.integrate:main
     - pyFAI-recalib = pyFAI.app.recalib:main
