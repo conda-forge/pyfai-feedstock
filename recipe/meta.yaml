@@ -15,7 +15,7 @@ build:
   number: 0
   script: python setup.py build install  # [linux]
   script: python setup.py build --no-openmp  # [osx]
-  skip: True  # [win]
+  script: python setup.py  # [win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -40,9 +40,9 @@ requirements:
     - numpy 1.11.*
     - cython
     - scipy
-    - matplotlib
     - fabio
     - h5py
+    - toolchain
 
   run:
     - python
