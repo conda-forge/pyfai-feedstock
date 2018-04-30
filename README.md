@@ -22,14 +22,16 @@ reference compound.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyfai-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyfai-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyfai-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyfai-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pyfai-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pyfai-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pyfai-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pyfai-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pyfai-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pyfai-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/version.svg)](https://anaconda.org/conda-forge/pyfai)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyfai/badges/downloads.svg)](https://anaconda.org/conda-forge/pyfai)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyfai-green.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) |
 
 Installing pyfai
 ================
