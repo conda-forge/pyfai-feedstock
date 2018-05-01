@@ -12,10 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py build install  # [linux]
-  script: python setup.py build --no-openmp  # [osx]
-  skip: True  # [win]
+  number: 1 
+  script: python setup.py build install  # [linux or win]
+  script: python setup.py build --no-openmp  && python setup.py install  # [osx]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -40,9 +39,12 @@ requirements:
     - numpy 1.11.*
     - cython
     - scipy
-    - matplotlib
     - fabio
     - h5py
+    - toolchain
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
 
   run:
     - python
@@ -54,6 +56,9 @@ requirements:
     - lxml
     - matplotlib
     - silx
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
 
 test:
   imports:
