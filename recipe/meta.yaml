@@ -68,6 +68,8 @@ test:
     - pyFAI.gui
   commands:
     - pyFAI-calib -h
+  downstreams:
+    - xpdtools
 
 about:
   home: https://github.com/silx-kit/pyFAI/
