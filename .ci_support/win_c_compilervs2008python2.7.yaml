@@ -1,3 +1,5 @@
+c_compiler:
+- vs2008
 numpy:
 - '1.11'
 pin_run_as_build:
@@ -6,3 +8,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '2.7'
+zip_keys:
+- - python
+  - c_compiler
