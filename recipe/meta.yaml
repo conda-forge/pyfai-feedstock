@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "0.15.0" %}
-{% set sha256 = "d72ae3b81ee4350e3768fd9ddc7a03ede4e33dbccddcba449cf1d563757c4726" %}
+{% set version = "0.17.0" %}
+{% set sha256 = "f31ee2dedffcb253229dadc818a578c5d00385ad5015ee29ad3bd2c98932dd4a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 1000
   script: python setup.py build install  # [linux or win]
   script: python setup.py build --no-openmp  && python setup.py install  # [osx]
   entry_points:
