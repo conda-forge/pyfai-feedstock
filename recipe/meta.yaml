@@ -13,8 +13,8 @@ source:
 
 build:
   number: 1000
-  script: python setup.py build install  # [linux or win]
-  script: python setup.py build --no-openmp  && python setup.py install  # [osx]
+  script: python setup.py build install  # [linux or win and py3k]
+  script: python setup.py build --no-openmp  && python setup.py install  # [osx and py3k]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
