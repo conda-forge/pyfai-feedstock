@@ -62,8 +62,9 @@ test:
     - pyFAI.test
     - pyFAI.third_party
     - pyFAI.gui
-  commands:
-    - pyFAI-calib -h
+# Bring these back when CDT/yum stuff is done
+#  commands:
+#    - pyFAI-calib -h
 
 about:
   home: https://github.com/silx-kit/pyFAI/
