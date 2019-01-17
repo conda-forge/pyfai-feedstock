@@ -31,6 +31,7 @@ build:
     - pyFAI-recalib = pyFAI.app.recalib:main
     - pyFAI-saxs = pyFAI.app.saxs:main
     - pyFAI-waxs = pyFAI.app.waxs:main
+  skip: True  # [py2k]
 
 requirements:
   build:
