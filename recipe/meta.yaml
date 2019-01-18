@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "0.15.0" %}
-{% set sha256 = "d72ae3b81ee4350e3768fd9ddc7a03ede4e33dbccddcba449cf1d563757c4726" %}
+{% set version = "0.17.0" %}
+{% set sha256 = "f31ee2dedffcb253229dadc818a578c5d00385ad5015ee29ad3bd2c98932dd4a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
-  script: python setup.py build install  # [linux or win]
-  script: python setup.py build --no-openmp  && python setup.py install  # [osx]
+  number: 1000
+  script: python setup.py build install  # [linux or win and py3k]
+  script: python setup.py build --no-openmp  && python setup.py install  # [osx and py3k]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -31,10 +31,12 @@ build:
     - pyFAI-recalib = pyFAI.app.recalib:main
     - pyFAI-saxs = pyFAI.app.saxs:main
     - pyFAI-waxs = pyFAI.app.waxs:main
+  skip: True  # [py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - setuptools
@@ -61,8 +63,9 @@ test:
     - pyFAI.test
     - pyFAI.third_party
     - pyFAI.gui
-  commands:
-    - pyFAI-calib -h
+# Bring these back when CDT/yum stuff is done
+#  commands:
+#    - pyFAI-calib -h
 
 about:
   home: https://github.com/silx-kit/pyFAI/
