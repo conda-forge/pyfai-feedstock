@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script: python setup.py build install  # [linux or win and py3k]
-  script: python setup.py build --no-openmp  && python setup.py install  # [osx and py3k]
+  script: python setup.py build --no-openmp  && python setup.py install  # [osx]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -31,7 +31,7 @@ build:
     - pyFAI-recalib = pyFAI.app.recalib:main
     - pyFAI-saxs = pyFAI.app.saxs:main
     - pyFAI-waxs = pyFAI.app.waxs:main
-  skip: True  # [py2k]
+  skip: True  # [py2k and win]
 
 requirements:
   build:
