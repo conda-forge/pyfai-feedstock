@@ -203,4 +203,5 @@ Feedstock Maintainers
 * [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@chiahaoliu](https://github.com/chiahaoliu/)
 * [@tacaswell](https://github.com/tacaswell/)
+* [@tschoonj](https://github.com/tschoonj/)
 

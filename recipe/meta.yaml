@@ -12,9 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py build install  # [linux or win and py3k]
-  script: python setup.py build --no-openmp  && python setup.py install  # [osx]
+  number: 1
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -45,6 +43,7 @@ requirements:
     - scipy
     - fabio
     - h5py
+    - pip
 
   run:
     - python
@@ -90,3 +89,4 @@ extra:
     - CJ-Wright
     - tacaswell
     - chiahaoliu
+    - tschoonj
