@@ -44,6 +44,7 @@ requirements:
     - fabio
     - h5py
     - pip
+    - numexpr
 
   run:
     - python
@@ -51,10 +52,10 @@ requirements:
     - fabio
     - scipy
     - h5py
-    - pillow
-    - lxml
     - matplotlib
     - silx
+    - numexpr
+    - setuptools
 
 test:
   imports:
@@ -68,8 +69,9 @@ test:
 
 about:
   home: https://github.com/silx-kit/pyFAI/
-  license: GPL-3
-  license_file: LICENSES.txt
+  license: MIT
+  license_family: MIT
+  license_file: copyright
   summary: 'Python implementation of fast azimuthal integration'
 
   description: |
@@ -81,7 +83,7 @@ about:
     next to the border thanks to pixel splitting. Finally pyFAI provides also
     tools to calibrate the experimental setup using Debye-Scherrer rings of a
     reference compound.
-  doc_url: http://pythonhosted.org/pyFAI/
+  doc_url: http://www.silx.org/doc/pyFAI/latest/
   dev_url: https://github.com/silx-kit/pyFAI/
 
 extra:
