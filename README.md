@@ -3,7 +3,7 @@ About pyfai
 
 Home: https://github.com/silx-kit/pyFAI/
 
-Package license: GPL-3
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
