@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -54,7 +54,7 @@ requirements:
     - h5py
     - pillow
     - lxml
-    - matplotlib
+    - matplotlib-base
     - silx
     - numexpr
     - setuptools
