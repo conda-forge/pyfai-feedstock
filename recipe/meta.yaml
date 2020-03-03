@@ -63,8 +63,6 @@ test:
 #    - pyFAI-calib -h
 
 outputs:
-  - name: pyfai-base
-
   - name: pyfai
     build:
       noarch: generic
