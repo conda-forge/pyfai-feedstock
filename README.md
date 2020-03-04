@@ -1,9 +1,9 @@
-About pyfai
-===========
+About pyfai-base
+================
 
 Home: https://github.com/silx-kit/pyFAI/
 
-Package license: GPL-3
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
@@ -133,20 +133,21 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pyfai-green.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyfai.svg)](https://anaconda.org/conda-forge/pyfai) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyfai--base-green.svg)](https://anaconda.org/conda-forge/pyfai-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyfai-base.svg)](https://anaconda.org/conda-forge/pyfai-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyfai-base.svg)](https://anaconda.org/conda-forge/pyfai-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyfai-base.svg)](https://anaconda.org/conda-forge/pyfai-base) |
 
-Installing pyfai
-================
+Installing pyfai-base
+=====================
 
-Installing `pyfai` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `pyfai-base` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `pyfai` can be installed with:
+Once the `conda-forge` channel has been enabled, `pyfai, pyfai-base` can be installed with:
 
 ```
-conda install pyfai
+conda install pyfai pyfai-base
 ```
 
 It is possible to list all of the versions of `pyfai` available on your platform with:
@@ -194,17 +195,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating pyfai-feedstock
-========================
+Updating pyfai-base-feedstock
+=============================
 
-If you would like to improve the pyfai recipe or build a new
+If you would like to improve the pyfai-base recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/pyfai-feedstock are
+Note that all branches in the conda-forge/pyfai-base-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

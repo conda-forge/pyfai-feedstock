@@ -1,18 +1,18 @@
-{% set name = "pyfai" %}
+{% set name = "pyFAI" %}
 {% set version = "0.19.0" %}
-{% set sha256 = "1e329d2bdd6f4ddc4c70460bb0b994a33b6885bff810b11a7871d83ef8756281" %}
+{% set sha256 = "4dcbc92470997b5002d5626da4df428ab12efcfcec437d4cb001f41141665774" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-base
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
-  url: https://github.com/silx-kit/pyFAI/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -29,34 +29,28 @@ build:
     - pyFAI-recalib = pyFAI.app.recalib:main
     - pyFAI-saxs = pyFAI.app.saxs:main
     - pyFAI-waxs = pyFAI.app.waxs:main
-  skip: True  # [py2k and win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+
   host:
     - python
     - setuptools
     - numpy
     - cython
-    - scipy
-    - fabio
-    - h5py
     - pip
-    - numexpr
 
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - fabio
+    - matplotlib-base
     - scipy
-    - h5py
-    - pillow
-    - lxml
-    - matplotlib
-    - silx
     - numexpr
+    - h5py
+    - silx-base
     - setuptools
 
 test:
@@ -64,10 +58,28 @@ test:
     - pyFAI
     - pyFAI.test
     - pyFAI.third_party
-    - pyFAI.gui
 # Bring these back when CDT/yum stuff is done
 #  commands:
 #    - pyFAI-calib -h
+
+outputs:
+  - name: pyfai-base
+
+  - name: pyfai
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage('pyfai-base', max_pin="x.x.x.x") }}
+        - matplotlib
+        - silx
+        - hdf5plugin
+    test:
+      imports:
+        - pyFAI
+        - pyFAI.test
+        - pyFAI.third_party
+        - pyFAI.gui
 
 about:
   home: https://github.com/silx-kit/pyFAI/
