@@ -12,7 +12,7 @@ source:
 
 build:
   number: 3
-  skip: True  # [py2k and win]
+  skip: True  # [python_impl == 'pypy' or py2k]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
