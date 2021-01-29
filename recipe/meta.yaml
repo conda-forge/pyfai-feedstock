@@ -1,6 +1,6 @@
 {% set name = "pyFAI" %}
-{% set version = "0.19.0" %}
-{% set sha256 = "4dcbc92470997b5002d5626da4df428ab12efcfcec437d4cb001f41141665774" %}
+{% set version = "0.20.0" %}
+{% set sha256 = "86cc23c130d4579e1cf322237e9f9cc8338c586eb929d1a469a0c36f2a4cdd9d" %}
 
 package:
   name: {{ name|lower }}-base
@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [py2k and win]
+  number: 0
+  skip: true  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -86,7 +86,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: copyright
-  summary: 'Python implementation of fast azimuthal integration'
+  summary: Python implementation of fast azimuthal integration
 
   description: |
     pyFAI is an azimuthal integration library that tries to be fast (as fast
