@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [py2k and win]
+  number: 0
+  skip: true  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -86,7 +86,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: copyright
-  summary: 'Python implementation of fast azimuthal integration'
+  summary: Python implementation of fast azimuthal integration
 
   description: |
     pyFAI is an azimuthal integration library that tries to be fast (as fast
