@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   skip: True  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
