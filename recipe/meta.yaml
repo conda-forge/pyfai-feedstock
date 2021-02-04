@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [py2k and win]
+  number: 1
+  skip: true  # [py2k and win and python_impl == 'pypy']
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
