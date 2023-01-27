@@ -1,6 +1,6 @@
-{% set name = "pyFAI" %}
-{% set version = "0.21.3" %}
-{% set sha256 = "c999d57249af806012a2683be2204d81887de159ed48e4cabacf83860b3dedfd" %}
+{% set name = "pyfai" %}
+{% set version = "2023.1.0" %}
+{% set sha256 = "56620c769d3f8e53667992019540443ea71bb236ed095efc90b8c91afb6bef66" %}
 
 package:
   name: {{ name|lower }}-base
@@ -41,7 +41,8 @@ requirements:
 
   host:
     - python
-    - setuptools
+    - setuptools <60.0.0  # [osx]
+    - meson-python   # [not osx]
     - numpy
     - cython
     - pip
@@ -55,7 +56,6 @@ requirements:
     - numexpr
     - h5py
     - silx-base
-    - setuptools
 
 test:
   imports:
