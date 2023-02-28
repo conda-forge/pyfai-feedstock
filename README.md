@@ -1,11 +1,11 @@
-About pyfai-base
-================
+About pyfai-base-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfai-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/silx-kit/pyFAI/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfai-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python implementation of fast azimuthal integration
 
