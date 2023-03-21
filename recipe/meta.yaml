@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "2023.2.0" %}
-{% set sha256 = "97e5cd96f5992af44528fd33b9f97668f4728bb9e45bdf79a7ee23b71d2c5b4c" %}
+{% set version = "2023.3.0" %}
+{% set sha256 = "2b51571f58613d294824e045cb9599136038f5c53ac6d693ec6dd23e9576dc0e" %}
 
 package:
   name: {{ name|lower }}-base
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
