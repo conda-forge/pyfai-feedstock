@@ -78,12 +78,6 @@ outputs:
         - matplotlib
         - silx
         - hdf5plugin
-    test:
-      imports:
-        - pyFAI
-        - pyFAI.test
-        - pyFAI.third_party
-        - pyFAI.gui
 
 about:
   home: https://github.com/silx-kit/pyFAI/
