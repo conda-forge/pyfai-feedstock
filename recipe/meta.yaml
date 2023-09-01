@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "2023.5.0" %}
-{% set sha256 = "8c578a753340463b6c08e9949a07b5ee02f4920fe2b51f3afe8d4cf3d38234f9" %}
+{% set version = "2023.8.0" %}
+{% set sha256 = "d389e6a423e913cf69af86dbaca1a83f180ef28ec26c27449f59d47ce837557e" %}
 
 package:
   name: {{ name|lower }}-base
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k and win]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
@@ -78,12 +78,6 @@ outputs:
         - matplotlib
         - silx
         - hdf5plugin
-    test:
-      imports:
-        - pyFAI
-        - pyFAI.test
-        - pyFAI.third_party
-        - pyFAI.gui
 
 about:
   home: https://github.com/silx-kit/pyFAI/
