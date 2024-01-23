@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "2023.9.0" %}
-{% set sha256 = "027c24622d4c55a00f17b796b6891560f7eb6b6d92b0e3877c97f65485ec1f3b" %}
+{% set version = "2024.1.0" %}
+{% set sha256 = "1ebd3ef1548e86b66104a989f945703cf89d549a22187321b893a1afa0290da9" %}
 
 package:
   name: {{ name|lower }}-base
@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py2k and win]
+  skip: true  # [python_impl == "pypy"]
   entry_points:
     - check_calib = pyFAI.app.check_calib:main
     - detector2nexus = pyFAI.app.detector2nexus:main
@@ -23,48 +23,62 @@ build:
     - pyFAI-average = pyFAI.app.average:main
     - pyFAI-benchmark = pyFAI.app.benchmark:main
     - pyFAI-calib = pyFAI.app.calib:main
-    - pyFAI-calib2 = pyFAI.app.calib2:main
-    - pyFAI-drawmask = pyFAI.app.drawmask:main
-    - pyFAI-integrate = pyFAI.app.integrate:main
     - pyFAI-recalib = pyFAI.app.recalib:main
     - pyFAI-saxs = pyFAI.app.saxs:main
     - pyFAI-waxs = pyFAI.app.waxs:main
+    - sparsify-Bragg = pyFAI.app.sparsify:main
+    - peakfinder = pyFAI.app.peakfinder:main
+    - pyFAI-calib2 = pyFAI.app.calib2:main
+    - pyFAI-drawmask = pyFAI.app.drawmask:main
+    - pyFAI-diffmap = pyFAI.app.diff_map:main
+    - pyFAI-integrate = pyFAI.app.integrate:main
+
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
+    - ninja                                  # [build_platform != target_platform]
+    - pkg-config                             # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
 
   host:
     - python
-    - setuptools <60.0.0  # [osx]
-    - meson-python   # [not osx]
-    - numpy
-    - cython
+    - python-build
     - pip
+    - meson-python >=0.11
+    - meson >=0.64
+    - ninja
+    - wheel
+    - numpy
+    - cython >=0.29.31
+    - pyproject-metadata >=0.5.0
+    - tomli >=1.0.0
 
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - fabio
-    - matplotlib-base
-    - scipy
-    - numexpr
     - h5py
-    - silx-base
+    - fabio
+    - silx-base >=1.1
+    - numexpr
+    - scipy
+    - matplotlib-base
+
 
 test:
   imports:
     - pyFAI
     - pyFAI.test
     - pyFAI.third_party
-# Bring these back when CDT/yum stuff is done
-#  commands:
-#    - pyFAI-calib -h
+  commands:
+    - pip check
+  requires:
+    - pip
+
 
 outputs:
   - name: pyfai-base
@@ -76,7 +90,7 @@ outputs:
       run:
         - {{ pin_subpackage('pyfai-base', max_pin="x.x.x.x") }}
         - matplotlib
-        - silx
+        - silx >=1.1
         - hdf5plugin
 
 about:
