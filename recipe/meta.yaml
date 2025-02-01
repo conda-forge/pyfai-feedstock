@@ -1,13 +1,13 @@
 {% set name = "pyfai" %}
-{% set version = "2024.9.0" %}
-{% set sha256 = "00119f57e4a2f6ee9facd8069a410802623e8c2479aeec373d1f611ea513ddad" %}
+{% set version = "2025.1.0" %}
+{% set sha256 = "396cb36876d4a9cd989b670b73868001c2b5070f7f3be2c496397605f6f7d181" %}
 
 package:
   name: {{ name|lower }}-base
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
