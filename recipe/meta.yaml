@@ -1,6 +1,6 @@
 {% set name = "pyfai" %}
-{% set version = "2026.5.0" %}
-{% set sha256 = "f343cf0599f5e3e01163a41623cd4225da9bddbd4532a872256a15b01628559b" %}
+{% set version = "2026.9.0" %}
+{% set sha256 = "a0cfb92208d73143f1ff03cf1183efd95562bca37d73d8af0578ff0b2940cc29" %}
 
 package:
   name: {{ name|lower }}-base
